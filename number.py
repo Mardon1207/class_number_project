@@ -233,9 +233,27 @@ class Number:
 
         returns: dict
         """
-        pass
+        n=self.n
+        i=0
+        s=str(n)
+        d=[]
+        l=[]
+        while i<len(s):
+            j=i+1
+            m=1
+            while j<len(s):
+                if int(s[i])==int(s[j]):
+                    m+=1
+                    
+                j+=1
+            
+            l=int(s[i]),m
+            d.append(l)
+            l=[]
+            i+=1
+        return dict(d)
     
 
 # Create a new instance of Number
 number = Number(13241)
-print(number.get_median())
+print(number.get_frequency())
